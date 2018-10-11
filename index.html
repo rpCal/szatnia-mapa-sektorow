@@ -44,7 +44,65 @@
                         return 'A - kwadrat'
                     }
                     
-                    return 100
+
+                    if(n >= 43 && n <= 70){
+                        return 'B - korytarz'
+                    }
+                    if(n >= 253 && n <= 273){
+                        return 'B - korytarz'
+                    }
+                    if(n >= 29 && n <= 42){
+                        return 'B - sciana'
+                    }
+                    if(n >= 71 && n <= 84){
+                        return 'B - sciana'
+                    }
+                    if(n >= 254 && n <= 280){
+                        return 'B - kwadrat'
+                    }
+
+
+                    if(n >= 85 && n <= 98){
+                        return 'C - korytarz'
+                    }
+                    if(n >= 113 && n <= 126){
+                        return 'C - korzytarz'
+                    }
+                    if(n >= 225 && n <= 238){
+                        return 'C - korytarz'
+                    }
+                    if(n >= 99 && n <= 112){
+                        return 'C - sciana'
+                    }
+                    if(n >= 127 && n <= 140){
+                        return 'C - sciana'
+                    }
+                    if(n >= 239 && n <= 252){
+                        return 'C - kwadrat'
+                    }
+
+
+                    if(n >= 169 && n <= 183){
+                        return 'D - korytarz'
+                    }
+                    if(n >= 141 && n <= 154){
+                        return 'D - korytarz'
+                    }
+                    if(n >= 310 && n <= 336){
+                        return 'D - korytarz'
+                    }
+                    if(n >= 155 && n <= 168){
+                        return 'D - sciana'
+                    }
+                    if(n >= 309 && n <= 335){
+                        return 'D - sciana'
+                    }
+                    if(n >= 184 && n <= 197){
+                        return 'D - kwadrat'
+                    }
+
+
+                    return 'brak wyniku'
                 }
                 var input = document.querySelector('#search_field')
                 var result = document.querySelector('#result');
