@@ -21,7 +21,30 @@
                     if(value == null){
                         return 'brak'    
                     }
-                    return 'cos jest'
+                    var n = parseInt(value, 10);
+                    if(isNaN(n)){
+                        return 'nie jest liczbą'
+                    }
+                    if(n < 0 || n > 1000){
+                        return 'liczba nie wlasciwa'
+                    }
+
+                    // A
+                    //
+                    if(n >= 295 && n <= 308){
+                        return 'A - korytarz'
+                    }
+                    if(n >= 1 && n <= 13){
+                        return 'A - korytarz'
+                    }
+                    if(n >= 15 && n <= 28){
+                        return 'A - sciana'
+                    }
+                    if(n >= 281 && n <= 294){
+                        return 'A - kwadrat'
+                    }
+                    
+                    return 100
                 }
                 var input = document.querySelector('#search_field')
                 var result = document.querySelector('#result');
@@ -33,7 +56,7 @@
                     result.innerHTML = searchResult(input.value);
                 });
                 result.innerHTML = searchResult(null);
-                console.log('abc')
+                console.log('ping...')
             })();
         </script>
     </body>
