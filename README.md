@@ -1,0 +1,1 @@
+# szatnia-mapa-sektorow
