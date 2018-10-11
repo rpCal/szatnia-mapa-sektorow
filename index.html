@@ -21,10 +21,13 @@
                     if(value == null){
                         return 'brak'    
                     }
+                    
                     var n = parseInt(value, 10);
+                    
                     if(isNaN(n)){
                         return 'nie jest liczbą'
                     }
+
                     if(n < 0 || n > 1000){
                         return 'liczba nie wlasciwa'
                     }
@@ -32,10 +35,10 @@
                     // A
                     //
                     if(n >= 295 && n <= 308){
-                        return 'A - korytarz'
+                        return 'A - korytarz - kwadrat'
                     }
                     if(n >= 1 && n <= 13){
-                        return 'A - korytarz'
+                        return 'A - korytarz - sciana'
                     }
                     if(n >= 15 && n <= 28){
                         return 'A - sciana'
@@ -46,10 +49,10 @@
                     
 
                     if(n >= 43 && n <= 70){
-                        return 'B - korytarz'
+                        return 'B - korytarz - sciana'
                     }
                     if(n >= 253 && n <= 273){
-                        return 'B - korytarz'
+                        return 'B - korytarz - kwadrat'
                     }
                     if(n >= 29 && n <= 42){
                         return 'B - sciana'
@@ -63,13 +66,13 @@
 
 
                     if(n >= 85 && n <= 98){
-                        return 'C - korytarz'
+                        return 'C - korytarz - sciana'
                     }
                     if(n >= 113 && n <= 126){
-                        return 'C - korzytarz'
+                        return 'C - korzytarz - sciana'
                     }
                     if(n >= 225 && n <= 238){
-                        return 'C - korytarz'
+                        return 'C - korytarz - kwadrat'
                     }
                     if(n >= 99 && n <= 112){
                         return 'C - sciana'
@@ -83,13 +86,13 @@
 
 
                     if(n >= 169 && n <= 183){
-                        return 'D - korytarz'
+                        return 'D - korytarz - kwadrat'
                     }
                     if(n >= 141 && n <= 154){
-                        return 'D - korytarz'
+                        return 'D - korytarz - sciana'
                     }
                     if(n >= 310 && n <= 336){
-                        return 'D - korytarz'
+                        return 'D - korytarz - sciana'
                     }
                     if(n >= 155 && n <= 168){
                         return 'D - sciana'
@@ -101,18 +104,21 @@
                         return 'D - kwadrat'
                     }
 
-
                     return 'brak wyniku'
                 }
+
                 var input = document.querySelector('#search_field')
                 var result = document.querySelector('#result');
+                
                 if(input == null || result == null){
                     alert('Nie dziala strona! Odśwież');
                 }
+                
                 input.addEventListener('input', function(){
                     console.log('input changed to: ', input.value);
                     result.innerHTML = searchResult(input.value);
                 });
+                
                 result.innerHTML = searchResult(null);
                 console.log('ping...')
             })();
